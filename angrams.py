@@ -7,8 +7,8 @@ parser = argparse.ArgumentParser(description='Print anagrams in a dictionary.')
 parser.add_argument('dictfile', type=file, help='dictionary file with one word per line')
 args = parser.parse_args()
 
-# map to hold the anagram lists
 anagrams = defaultdict(list)
+
 for word in args.dictfile:
   word = word.strip()
   # only want words with at least 4 characters
